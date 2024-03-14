@@ -30,5 +30,5 @@
 }
 
 .markdown img {
-  @apply my-6 shadow-lg;
+  @apply max-w-[80%] my-10 shadow-lg mx-auto;
 }
