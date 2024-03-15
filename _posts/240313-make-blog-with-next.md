@@ -1,6 +1,6 @@
 ---
 title: "Build Blog with Next.js in 5 Minutes!"
-excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus."
+excerpt: "Want to get your blog off the ground but pressed for time? With Next.js and a handy template, you're just 5 minutes away from going live. Here's your quick start guide."
 coverImage: "/assets/blog/next-js-blog/cover.svg"
 date: "2024-03-13"
 author:
