@@ -11,18 +11,36 @@ export function Intro() {
         />
         DevStory
       </h1>
-      <h4 className="text-center md:text-left text-lg mt-5 md:pl-8">
+      <h4 className="text-center md:text-left text-lg mt-5 md:pl-8 space-x-1">
         <a
           href="https://www.linkedin.com/in/doyun-hwang-397855214/"
           className="underline hover:text-blue-600 duration-200 transition-colors"
         >
-          LinkedIn
-        </a>{" "}
+          <img
+            src="/favicon/linkedin.png"
+            alt="linkedin"
+            className="size-[1.5rem] inline-block"
+          />
+        </a>
         <a
           href="https://www.youtube.com/channel/UCNF2FGsT3y6Xvbqv_9KJ0pA"
           className="underline hover:text-blue-600 duration-200 transition-colors"
         >
-          Utube
+          <img
+            src="/favicon/youtube.png"
+            alt="youtube"
+            className="size-[1.5rem] inline-block"
+          />
+        </a>
+        <a
+          href="https://github.com/materokatti"
+          className="underline hover:text-blue-600 duration-200 transition-colors"
+        >
+          <img
+            src="/favicon/github.png"
+            alt="github"
+            className="size-[1.5rem] inline-block"
+          />
         </a>
       </h4>
     </section>
