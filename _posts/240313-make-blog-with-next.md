@@ -1,13 +1,13 @@
 ---
 title: "Build Blog with Next.js in 5 Minutes!"
 excerpt: "Want to get your blog off the ground but pressed for time? With Next.js and a handy template, you're just 5 minutes away from going live. Here's your quick start guide."
-coverImage: "/assets/blog/next-js-blog/cover.svg"
+coverImage: "/assets/blog/next-js-blog/cover2.jpg"
 date: "2024-03-13"
 author:
   name: "Doyun Hwang"
   picture: "/assets/blog/authors/logo.png"
 ogImage:
-  url: "/assets/blog/next-js-blog/cover.jpg"
+  url: "/assets/blog/next-js-blog/cover2.jpg"
 ---
 
 ## Quick Guide: Start a Blog with Next.js

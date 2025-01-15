@@ -10,25 +10,27 @@ function generateBlurPlaceholder(width: number, height: number) {
   `).toString('base64')}`;
 }
 
-interface SkeletonImageProps {
+interface CoverImageProps {
   src: string;
   alt: string;
+  title: string;
   width?: number;
   height?: number;
   className?: string;
 }
 
-const SkeletonImage = ({
+const CoverImage = ({
   src,
   alt,
+  title,
   width = 1300,
   height = 630,
   className = ''
-}: SkeletonImageProps) => {
+}: CoverImageProps) => {
   const [isLoading, setIsLoading] = useState(true);
 
   return (
-    <div className="relative overflow-hidden">
+    <div className="flex justify-center relative overflow-hidden">
       {isLoading && (
         <div
           className="absolute inset-0 bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 animate-shimmer"
@@ -44,8 +46,8 @@ const SkeletonImage = ({
         width={width}
         height={height}
         className={`transition-opacity duration-500 ${isLoading ? 'opacity-0' : 'opacity-100'} ${className}`}
-        placeholder="blur"
-        blurDataURL={generateBlurPlaceholder(width, height)}
+        // placeholder="blur"
+        // blurDataURL={generateBlurPlaceholder(width, height)}
         onLoadingComplete={() => setIsLoading(false)}
         loading='lazy'
       />
@@ -53,4 +55,4 @@ const SkeletonImage = ({
   );
 };
 
-export default SkeletonImage;
+export default CoverImage;
