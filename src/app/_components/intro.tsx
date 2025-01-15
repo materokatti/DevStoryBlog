@@ -8,6 +8,7 @@ export function Intro() {
           className="inline-block size-[3rem]"
           src="/favicon/logo.png"
           alt="Devstory logo"
+          loading="lazy"
         />
         DevStory
       </h1>
@@ -20,6 +21,7 @@ export function Intro() {
             src="/favicon/linkedin.png"
             alt="linkedin"
             className="size-[1.5rem] inline-block"
+            loading="lazy"
           />
         </a>
         <a
@@ -30,6 +32,7 @@ export function Intro() {
             src="/favicon/youtube.png"
             alt="youtube"
             className="size-[1.5rem] inline-block"
+            loading="lazy"
           />
         </a>
         <a
@@ -40,6 +43,7 @@ export function Intro() {
             src="/favicon/github.png"
             alt="github"
             className="size-[1.5rem] inline-block"
+            loading="lazy"
           />
         </a>
       </h4>

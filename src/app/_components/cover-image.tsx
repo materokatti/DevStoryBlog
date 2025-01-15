@@ -1,36 +1,56 @@
-import cn from "classnames";
-import Link from "next/link";
-import Image from "next/image";
+"use client";
+import React, { useState } from 'react';
+import Image from 'next/image';
 
-type Props = {
-  title: string;
+function generateBlurPlaceholder(width: number, height: number) {
+  return `data:image/svg+xml;base64,${Buffer.from(`
+    <svg width="${width}" height="${height}" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <rect width="${width}" height="${height}" fill="#F3F4F6"/>
+    </svg>
+  `).toString('base64')}`;
+}
+
+interface SkeletonImageProps {
   src: string;
-  slug?: string;
-};
+  alt: string;
+  width?: number;
+  height?: number;
+  className?: string;
+}
 
-const CoverImage = ({ title, src, slug }: Props) => {
-  const image = (
-    <Image
-      src={src}
-      alt={`Cover Image for ${title}`}
-      className={cn("shadow-sm w-full", {
-        "hover:shadow-lg transition-shadow duration-200": slug,
-      })}
-      width={1300}
-      height={630}
-    />
-  );
+const SkeletonImage = ({
+  src,
+  alt,
+  width = 1300,
+  height = 630,
+  className = ''
+}: SkeletonImageProps) => {
+  const [isLoading, setIsLoading] = useState(true);
+
   return (
-    <div className="sm:mx-0">
-      {slug ? (
-        <Link as={`/posts/${slug}`} href="/posts/[slug]" aria-label={title}>
-          {image}
-        </Link>
-      ) : (
-        image
+    <div className="relative overflow-hidden">
+      {isLoading && (
+        <div
+          className="absolute inset-0 bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 animate-shimmer"
+          style={{
+            backgroundSize: '200% 100%',
+            animation: 'shimmer 1.5s infinite linear'
+          }}
+        />
       )}
+      <Image
+        src={src}
+        alt={alt}
+        width={width}
+        height={height}
+        className={`transition-opacity duration-500 ${isLoading ? 'opacity-0' : 'opacity-100'} ${className}`}
+        placeholder="blur"
+        blurDataURL={generateBlurPlaceholder(width, height)}
+        onLoadingComplete={() => setIsLoading(false)}
+        loading='lazy'
+      />
     </div>
   );
 };
 
-export default CoverImage;
+export default SkeletonImage;
