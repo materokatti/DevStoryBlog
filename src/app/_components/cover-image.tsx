@@ -12,8 +12,9 @@ function generateBlurPlaceholder(width: number, height: number) {
 
 interface CoverImageProps {
   src: string;
-  alt: string;
+  alt?: string;
   title: string;
+  slug?: string;
   width?: number;
   height?: number;
   className?: string;
@@ -21,8 +22,9 @@ interface CoverImageProps {
 
 const CoverImage = ({
   src,
-  alt,
+  alt = '',
   title,
+  slug,
   width = 1300,
   height = 630,
   className = ''
