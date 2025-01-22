@@ -1,6 +1,6 @@
 ---
 title: "Finding Balance in Code Quality: Readability, Predictability, Cohesion, and Coupling"
-excerpt: "..."
+excerpt: "The most important thing is to find a balance between readability, predictability, cohesion, and coupling. Especially, cohesion can conflict with other values. Developers need to determine which value is more important for the specific situation ..."
 coverImage: "/assets/blog/next-js-blog/cover2.jpg"
 date: "2025-01-21"
 author:
